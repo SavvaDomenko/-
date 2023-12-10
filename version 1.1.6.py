@@ -59,7 +59,7 @@ class Ball():
     def math_update(self):
         # сто тиков, но отрисловывает один
         for i in range(100):
-            self.angle_acceleration = (-1 * gravity * sin(self.angle) +  2 *  self.rd_velocity * self.angle_velocity) /  self.rd
+            self.angle_acceleration = (-1 * gravity * sin(self.angle) -  2 *  self.rd_velocity * self.angle_velocity) /  self.rd
             self.rd_acceleration = self.angle_velocity ** 2 * self.rd_velocity + gravity * cos(self.angle) - k/m * (self.rd - self.len)
             
             self.angle_velocity += self.angle_acceleration * dt
